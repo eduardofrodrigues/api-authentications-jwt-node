@@ -1,0 +1,11 @@
+{
+  "name": "api-authentications-jwt-node",
+  "version": "1.0.0",
+  "description": "Estudos de autenticação de usuário com email,senha e jason web token.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

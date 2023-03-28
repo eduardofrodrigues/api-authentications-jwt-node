@@ -10,6 +10,7 @@ routes.get('/', PublicController.root)
 
 //Users
 routes.post('/users/create', UserController.createUser);
+routes.post('/users/login', UserController.loginUser);
 routes.get('/users/list', UserController.listUsers)
 
 export default routes

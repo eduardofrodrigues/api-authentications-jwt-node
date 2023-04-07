@@ -1,7 +1,9 @@
 import express from 'express'
 import cors from 'cors'
 
-import routes from './routes.js'
+import publicRoutes from './routes/publicRoutes.js';
+import privateRoutes from './routes/privateRoutes.js';
+import privateMiddleare from './middlewares/privateRoutes.js';
 
 class App {
   constructor() {
@@ -16,7 +18,9 @@ class App {
   }
 
   routes() {
-    this.server.use(routes);
+    this.server.use(publicRoutes);
+    this.server.use(privateMiddleare);
+    this.server.use(privateRoutes)
   }
 
 }

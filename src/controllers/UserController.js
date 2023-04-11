@@ -54,11 +54,20 @@ class UserController {
     return response.status(400).json({
       message: "Invalid credentials"
     })
-    
+
   }
 
   async listUsers(request, response) {
-    return response.status(200).json(users)
+    const usersModified = users.map(element => {
+      return {
+        "userId": element.userId,
+        "name": element.name,
+        "email": element.email
+      }
+    })
+
+    return response.status(200).json(usersModified)
+    
   }
 
 }
